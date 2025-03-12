@@ -1,3 +1,43 @@
+# Stop ignoring the CSVs folder and its contents
+!CSVs/
+!CSVs/*.csv
+
+# Ignore other data files
+*.csv
+*.tsv
+*.dat
+*.data
+*.json
+*.xml
+*.xls
+*.xlsx
+*.h5
+*.hdf5
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+*.parquet
+*.feather
+*.orc
+*.avro
+*.dta
+*.sav
+*.por
+*.rdata
+*.rda
+*.spss
+*.sas7bdat
+*.xpt
+*.pkl
+*.pickle
+
+# Ignore specific Python files in the root directory
+/main.py
+/quiz.py
+/serveur.py
+
+# Existing rules
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -123,9 +163,3 @@ cython_debug/
 
 # PyCharm
 .idea/
-
-# Data files
-*.csv
-*.tsv
-*.dat
-*.data
