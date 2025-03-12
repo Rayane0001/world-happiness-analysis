@@ -1,43 +1,3 @@
-# Stop ignoring the CSVs folder and its contents
-!CSVs/
-!CSVs/*.csv
-
-# Ignore other data files
-*.csv
-*.tsv
-*.dat
-*.data
-*.json
-*.xml
-*.xls
-*.xlsx
-*.h5
-*.hdf5
-*.sql
-*.db
-*.sqlite
-*.sqlite3
-*.parquet
-*.feather
-*.orc
-*.avro
-*.dta
-*.sav
-*.por
-*.rdata
-*.rda
-*.spss
-*.sas7bdat
-*.xpt
-*.pkl
-*.pickle
-
-# Ignore specific Python files in the root directory
-/main.py
-/quiz.py
-/serveur.py
-
-# Existing rules
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -65,9 +25,12 @@ wheels/
 *.egg
 MANIFEST
 
+# Ignore specific Python files in the root directory
+/main.py
+/quiz.py
+/serveur.py
+
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -78,7 +41,6 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
-.nox/
 .coverage
 .coverage.*
 .cache
@@ -89,44 +51,11 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
+# PyCharm
+.idea/
 
 # Environments
 .env
@@ -134,32 +63,28 @@ celerybeat-schedule
 env/
 venv/
 ENV/
-env.bak/
-venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Data files - IGNORE THESE FIRST
+*.csv
+*.tsv
+*.dat
+*.data
+*.json
+*.xml
+*.xls
+*.xlsx
+*.h5
+*.hdf5
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+*.parquet
+*.feather
+*.pkl
+*.pickle
 
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-.idea/
+# THEN make exceptions - these come AFTER the ignores
+!CSVs/
+!CSVs/*.csv
+!CSVs/**/*.csv
